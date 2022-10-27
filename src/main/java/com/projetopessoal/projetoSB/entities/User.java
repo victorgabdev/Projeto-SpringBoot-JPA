@@ -1,13 +1,17 @@
 package com.projetopessoal.projetoSB.entities;
 
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
 
+@Entity
+@Table(name = "tb_user")
 public class User implements Serializable {
 
-    // Atributos
     private static final long serialVersionUID = 1L;
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)  // Estrategia de Incremento Unica
     private Long id;
     private String name;
     private String email;
