@@ -20,6 +20,8 @@ public class Order implements Serializable {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "GMT")
     private Instant moment;
 
+    // Formatar a saida do JSON
+    // É usado para formatar data e calendario de acordo com um formato SimpleDateFormat
     private Integer orderStatus;
 
     @ManyToOne

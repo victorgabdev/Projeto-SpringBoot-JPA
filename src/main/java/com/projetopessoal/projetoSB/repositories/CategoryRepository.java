@@ -1,0 +1,7 @@
+package com.projetopessoal.projetoSB.repositories;
+
+import com.projetopessoal.projetoSB.entities.Category;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface CategoryRepository extends JpaRepository<Category, Long> {
+}
