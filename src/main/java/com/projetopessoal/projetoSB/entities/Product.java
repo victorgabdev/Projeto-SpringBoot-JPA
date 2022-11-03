@@ -25,6 +25,7 @@ public class Product implements Serializable {
             inverseJoinColumns = @JoinColumn(name = "category_id"))
     private Set<Category> categories = new HashSet<>();
     // Set é um conjunto, e não deixa que existam duas categorias com o mesmo nome
+    // Uma relação @ManyToMany vai gerar uma @JoinTable
 
     public Product() {}
 
