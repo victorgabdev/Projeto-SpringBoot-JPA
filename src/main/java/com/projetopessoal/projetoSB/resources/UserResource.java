@@ -36,4 +36,10 @@ public class UserResource {
                 .buildAndExpand(user.getId()).toUri();
         return ResponseEntity.created(uri).body(user);  // retornar um 201 e um location na resposta
     }
+
+    @DeleteMapping(value = "/{id}")
+    public ResponseEntity<Void> delete(@PathVariable Long id) {
+        userService.delete(id);
+        return ResponseEntity.noContent().build();  // retorna um 204
+    }
 }
