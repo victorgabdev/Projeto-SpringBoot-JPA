@@ -2,8 +2,11 @@ package com.projetopessoal.projetoSB.services;
 
 import com.projetopessoal.projetoSB.entities.User;
 import com.projetopessoal.projetoSB.repositories.UserRepository;
+import com.projetopessoal.projetoSB.services.exceptions.DatabaseException;
 import com.projetopessoal.projetoSB.services.exceptions.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -30,7 +33,16 @@ public class UserService {
     }
 
     public void delete(Long id) {
-        userRepository.deleteById(id);
+        try {
+            userRepository.deleteById(id);
+        } catch (EmptyResultDataAccessException e) {
+            // Se tentar excluir um usuario que nao existe
+            throw new ResourceNotFoundException(id);
+        } catch (DataIntegrityViolationException e) {
+            // Se for um usuario que ja existe mas que viola o banco de dados
+            throw new DatabaseException(e.getMessage());
+        }
+
     }
 
     public User update(Long id, User user) {
