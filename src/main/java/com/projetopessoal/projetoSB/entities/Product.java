@@ -1,5 +1,7 @@
 package com.projetopessoal.projetoSB.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.HashSet;
@@ -26,6 +28,9 @@ public class Product implements Serializable {
     private Set<Category> categories = new HashSet<>();
     // Set é um conjunto, e não deixa que existam duas categorias com o mesmo nome
     // Uma relação @ManyToMany vai gerar uma @JoinTable
+
+    @OneToMany(mappedBy = "id.product")
+    private Set<OrderItem> items = new HashSet<>();
 
     public Product() {}
 
@@ -79,6 +84,15 @@ public class Product implements Serializable {
 
     public Set<Category> getCategories() {
         return categories;
+    }
+
+    @JsonIgnore
+    public Set<Order> gerOrders() {
+        Set<Order> orders = new HashSet<>();
+        for (OrderItem orderItem : items) {
+            orders.add(orderItem.getOrder());
+        }
+        return orders;
     }
 
     @Override
