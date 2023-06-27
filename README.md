@@ -1,10 +1,8 @@
 # API de E-commerce
 
----
 
 ## Índice
 
----
 
 - [Sobre](#sobre)
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
@@ -14,15 +12,12 @@
 
 ## Sobre
 
----
 
 O objetivo desta API é criar um software que possibilite ao usuário fazer compras em um e-commerce.
 Nesse app, um **produto** tem uma **categoria** e o **usuário** pode fazer o **pagamento** através de um **pedido**.
 A API foi criada utilizando o padrão de arquitetura de software *MVC*.
 
 ## Tecnologias Utilizadas
-
----
 
 O projeto foi desenvolvido utilizando as seguintes tecnologias:
 
@@ -35,13 +30,11 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
 
 ## Camada de Domínio 
 
----
 
 ![dominioEcommerce](https://github.com/victorgabdev/Projeto-SpringBoot-JPA/assets/75862737/b6b1d3e0-f99e-498e-9a28-61de5101a7ee)
 
 ## Como a API Funciona
 
----
 
 Essa API tem seis entidades na sua camada de domínio, são elas: Categoria (category), Pedido (order), Item Pedido (order_item),
 Pagamento (payment), Produto (product) e Usuário (user). É possível fazer um CRUD em todas as entidades.
@@ -50,7 +43,6 @@ Pagamento (payment), Produto (product) e Usuário (user). É possível fazer um 
 
 ## Instância de Domínio 
 
----
 
 Exemplo visual de como funciona a API em produção:
 
