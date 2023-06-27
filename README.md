@@ -8,9 +8,9 @@
 
 - [Sobre](#sobre)
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
-- [Camada de Domínio](#camada-de-domínio-)
+- [Camada de Domínio](#camada-de-domínio)
 - [Como a API Funciona](#como-a-api-funciona)
-- [Intância de Domínio](#instância-de-domínio-)
+- [Instância de Domínio](#instância-de-domínio)
 
 ## Sobre
 
@@ -31,7 +31,7 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
 - [Spring Data JPA](https://spring.io/projects/spring-data-jpa)
 - [H2 database](https://www.h2database.com/html/main.html)
 - [MySql](https://dev.mysql.com/doc/)
-- [Git e Github]((https://git-scm.com/doc))
+- [Git e Github](https://git-scm.com/doc)
 
 ## Camada de Domínio 
 
