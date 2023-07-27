@@ -13,9 +13,8 @@
 ## Sobre
 
 
-O objetivo desta API é criar um software que possibilite ao usuário fazer compras em um e-commerce.
-Nesse app, um **produto** tem uma **categoria** e o **usuário** pode fazer o **pagamento** através de um **pedido**.
-A API foi criada utilizando o padrão de arquitetura de software *MVC*.
+A API de E-commerce tem como objetivo possibilitar ao usuário fazer compras em um e-commerce. Neste aplicativo, um **produto** está associado a uma **categoria** e o **usuário** pode efetuar o **pagamento** através de um **pedido**. A API foi criada utilizando o padrão de arquitetura de software *MVC*.
+
 
 ## Tecnologias Utilizadas
 
@@ -36,8 +35,7 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
 ## Como a API Funciona
 
 
-Essa API tem seis entidades na sua camada de domínio, são elas: Categoria (category), Pedido (order), Item Pedido (order_item),
-Pagamento (payment), Produto (product) e Usuário (user). É possível fazer um CRUD em todas as entidades.
+Essa API possui seis entidades em sua camada de domínio: Categoria (category), Pedido (order), Item Pedido (order_item), Pagamento (payment), Produto (product) e Usuário (user). É possível realizar operações de CRUD em todas as entidades.
 
 > CRUD: Create, Read, Update, Delete.
 
